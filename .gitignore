@@ -1,0 +1,7 @@
+# This .gitignore file should be placed at the root of your Unity project directory
+
+/.idea/
+/public_old/
+/vendor/
+/public/node_modules/
+/public/build/

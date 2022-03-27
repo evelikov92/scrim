@@ -1,0 +1,72 @@
+2022-03-27 09:21:53; IP: UNKNOWN;
+URL: /;
+Exception: 2 file_get_contents(D:\Projects\scrim\engine/../public/build/index.html): failed to open stream: No such file or directory D:\Projects\scrim\engine\Http\Response.php 61 in D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php:34
+Stack trace:
+#0 D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php(53): Engine\ErrorHandler\Production\ErrorHandler::showException(500, '2 file_get_cont...')
+#1 [internal function]: Engine\ErrorHandler\Production\ErrorHandler->exception_handler(2, 'file_get_conten...', 'D:\\Projects\\scr...', 61, Array)
+#2 D:\Projects\scrim\engine\Http\Response.php(61): file_get_contents('D:\\Projects\\scr...')
+#3 D:\Projects\scrim\app\routes\route.php(15): Engine\Http\Response->page('D:\\Projects\\scr...')
+#4 [internal function]: Engine\Routes\Route->{closure}()
+#5 D:\Projects\scrim\engine\Routes\Route.php(299): call_user_func_array(Object(Closure), Array)
+#6 D:\Projects\scrim\engine\Routes\Route.php(406): Engine\Routes\Route->_executeAction(Object(Closure))
+#7 D:\Projects\scrim\engine\Routes\Route.php(176): Engine\Routes\Route->runRouteLogic(Object(Closure), Array)
+#8 D:\Projects\scrim\app\routes\route.php(17): Engine\Routes\Route->all(Array, Object(Closure))
+#9 D:\Projects\scrim\engine\Routes\Route.php(82): include_once('D:\\Projects\\scr...')
+#10 D:\Projects\scrim\engine\Application.php(78): Engine\Routes\Route->run()
+#11 D:\Projects\scrim\public\index.php(11): Engine\Application->run()
+#12 {main}
+
+2022-03-27 09:24:07; IP: UNKNOWN;
+URL: /;
+Exception: 2 file_get_contents(D:\Projects\scrim\engine/../public/build/index.html): failed to open stream: No such file or directory D:\Projects\scrim\engine\Http\Response.php 61 in D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php:34
+Stack trace:
+#0 D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php(53): Engine\ErrorHandler\Production\ErrorHandler::showException(500, '2 file_get_cont...')
+#1 [internal function]: Engine\ErrorHandler\Production\ErrorHandler->exception_handler(2, 'file_get_conten...', 'D:\\Projects\\scr...', 61, Array)
+#2 D:\Projects\scrim\engine\Http\Response.php(61): file_get_contents('D:\\Projects\\scr...')
+#3 D:\Projects\scrim\app\routes\route.php(15): Engine\Http\Response->page('D:\\Projects\\scr...')
+#4 [internal function]: Engine\Routes\Route->{closure}()
+#5 D:\Projects\scrim\engine\Routes\Route.php(299): call_user_func_array(Object(Closure), Array)
+#6 D:\Projects\scrim\engine\Routes\Route.php(406): Engine\Routes\Route->_executeAction(Object(Closure))
+#7 D:\Projects\scrim\engine\Routes\Route.php(176): Engine\Routes\Route->runRouteLogic(Object(Closure), Array)
+#8 D:\Projects\scrim\app\routes\route.php(17): Engine\Routes\Route->all(Array, Object(Closure))
+#9 D:\Projects\scrim\engine\Routes\Route.php(82): include_once('D:\\Projects\\scr...')
+#10 D:\Projects\scrim\engine\Application.php(78): Engine\Routes\Route->run()
+#11 D:\Projects\scrim\public\index.php(11): Engine\Application->run()
+#12 {main}
+
+2022-03-27 09:24:10; IP: UNKNOWN;
+URL: /;
+Exception: 2 file_get_contents(D:\Projects\scrim\engine/../public/build/index.html): failed to open stream: No such file or directory D:\Projects\scrim\engine\Http\Response.php 61 in D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php:34
+Stack trace:
+#0 D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php(53): Engine\ErrorHandler\Production\ErrorHandler::showException(500, '2 file_get_cont...')
+#1 [internal function]: Engine\ErrorHandler\Production\ErrorHandler->exception_handler(2, 'file_get_conten...', 'D:\\Projects\\scr...', 61, Array)
+#2 D:\Projects\scrim\engine\Http\Response.php(61): file_get_contents('D:\\Projects\\scr...')
+#3 D:\Projects\scrim\app\routes\route.php(15): Engine\Http\Response->page('D:\\Projects\\scr...')
+#4 [internal function]: Engine\Routes\Route->{closure}()
+#5 D:\Projects\scrim\engine\Routes\Route.php(299): call_user_func_array(Object(Closure), Array)
+#6 D:\Projects\scrim\engine\Routes\Route.php(406): Engine\Routes\Route->_executeAction(Object(Closure))
+#7 D:\Projects\scrim\engine\Routes\Route.php(176): Engine\Routes\Route->runRouteLogic(Object(Closure), Array)
+#8 D:\Projects\scrim\app\routes\route.php(17): Engine\Routes\Route->all(Array, Object(Closure))
+#9 D:\Projects\scrim\engine\Routes\Route.php(82): include_once('D:\\Projects\\scr...')
+#10 D:\Projects\scrim\engine\Application.php(78): Engine\Routes\Route->run()
+#11 D:\Projects\scrim\public\index.php(11): Engine\Application->run()
+#12 {main}
+
+2022-03-27 09:24:25; IP: UNKNOWN;
+URL: /;
+Exception: 2 file_get_contents(D:\Projects\scrim\engine/../public/build/index.html): failed to open stream: No such file or directory D:\Projects\scrim\engine\Http\Response.php 61 in D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php:34
+Stack trace:
+#0 D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php(53): Engine\ErrorHandler\Production\ErrorHandler::showException(500, '2 file_get_cont...')
+#1 [internal function]: Engine\ErrorHandler\Production\ErrorHandler->exception_handler(2, 'file_get_conten...', 'D:\\Projects\\scr...', 61, Array)
+#2 D:\Projects\scrim\engine\Http\Response.php(61): file_get_contents('D:\\Projects\\scr...')
+#3 D:\Projects\scrim\app\routes\route.php(15): Engine\Http\Response->page('D:\\Projects\\scr...')
+#4 [internal function]: Engine\Routes\Route->{closure}()
+#5 D:\Projects\scrim\engine\Routes\Route.php(299): call_user_func_array(Object(Closure), Array)
+#6 D:\Projects\scrim\engine\Routes\Route.php(406): Engine\Routes\Route->_executeAction(Object(Closure))
+#7 D:\Projects\scrim\engine\Routes\Route.php(176): Engine\Routes\Route->runRouteLogic(Object(Closure), Array)
+#8 D:\Projects\scrim\app\routes\route.php(17): Engine\Routes\Route->all(Array, Object(Closure))
+#9 D:\Projects\scrim\engine\Routes\Route.php(82): include_once('D:\\Projects\\scr...')
+#10 D:\Projects\scrim\engine\Application.php(78): Engine\Routes\Route->run()
+#11 D:\Projects\scrim\public\index.php(11): Engine\Application->run()
+#12 {main}
+

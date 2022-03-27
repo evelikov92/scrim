@@ -1,0 +1,41 @@
+.unrecognized {
+  pointer-events: none;
+  opacity: 0.4;
+}
+.spinner {
+  position: relative;
+}
+.spinner-shape {
+  display: block;
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -5em; /*set to a negative number 1/2 of your height*/
+  margin-left: -5em; /*set to a negative number 1/2 of your width*/
+  z-index: 10000000;
+  border: 2em solid #fff;
+  border-top: 1.2em solid #03A9F4;
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinner-text {
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -7.5em; /*set to a negative number 1/2 of your height*/
+  margin-left: -5em; /*set to a negative number 1/2 of your width*/
+  z-index: 10000001;
+  text-align: center;
+  line-height: 15em;
+  width: 10em;
+  height: 10em;
+  color: #000;
+  font-weight: bold;
+}
