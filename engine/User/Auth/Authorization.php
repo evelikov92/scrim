@@ -67,11 +67,6 @@ class Authorization extends Auth
         if (!$autoLogin) {
             $token = Text::genRandString(17);
             $user['token'] = parent::_generateTokenHashString($token);
-
-            // G-Systems Engineering feature
-            if (empty(Session::getInstance()->get('user'))) {
-                $user['is_deleted'] = 1;
-            }
         }
 
         // Save user on database
@@ -87,8 +82,8 @@ class Authorization extends Auth
         }
 
         // Send Email to the user
-        $user['token'] = $token;
-        Email::getInstance()->sendEmail($user['email'], 'activate_user_account', $user, 'User account activated');
+        //$user['token'] = $token;
+        //Email::getInstance()->sendEmail($user['email'], 'activate_user_account', $user, 'User account activated');
         return [];
     }
 }

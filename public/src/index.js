@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import Application from './containers/Application';
 import store from './store';
 
-//import 'font-awesome/css/font-awesome.min.css';
-//import 'bootstrap/dist/css/bootstrap.css';
+import 'font-awesome/css/font-awesome.min.css';
+import 'bootstrap/dist/css/bootstrap.css';
 
 import { setBeginningSettings } from "./utils/common";
 setBeginningSettings();

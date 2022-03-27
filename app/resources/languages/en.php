@@ -18,5 +18,8 @@ return [
     'not_start' => 'not_start',
     'not_end' => 'not_end',
     'not_email' => 'not_email',
-    'internal_server_error' => 'internal_server_error'
+    'internal_server_error' => 'internal_server_error',
+
+    'username_is_used' => 'username_is_used',
+    'email_is_used' => 'email_is_used'
 ];

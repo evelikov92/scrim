@@ -56,7 +56,7 @@ class Registration extends React.Component {
                 email,
                 () => this.setState({ emailError: '' }),
                 () => this.setState({ emailError: this.props.err.data.errors.Email })
-            )
+            );
         }
     }
 
@@ -65,7 +65,7 @@ class Registration extends React.Component {
      */
     success () {
         this.setState({ isFetchingData: true });
-        this.props.history.push('/');
+        // TODO navigate to home page
     }
 
     /**
@@ -80,13 +80,12 @@ class Registration extends React.Component {
      * @param {Object} values
      */
     formSubmit (values) {
-        console.log('FORM SUBMIT');
         this.props.registration(values, this.success, this.failed);
     }
 
     render () {
         let error = {
-            Email: null,
+            email: null,
             username: null
         };
         if (this.props.err && this.props.err.hasOwnProperty('data')) {
@@ -110,8 +109,6 @@ class Registration extends React.Component {
                               onSubmit={this.props.handleSubmit(values => this.formSubmit(values))}>
 
                             {!this.state.isFetchingData && <Spinner headTagId='registration-form' />}
-
-
 
                             {/* Form for put account information. For can login in the system. */}
                             <FormGroup>
@@ -170,8 +167,8 @@ class Registration extends React.Component {
                             </FormGroup>
 
                             <Row>
-                                <Col lg={{ size: 2, offset: 10 }}>
-                                    <Button size={'sm'} type={'submit'}>{signUp}</Button>
+                                <Col lg={{ size: 10, offset: 1 }}>
+                                    <Button size={'md'} type={'submit'} color={'success'} className={'float-end'}>{signUp}</Button>
                                 </Col>
                             </Row>
                         </Form>

@@ -6,7 +6,7 @@ import {
     LOG_IN,
     LOG_OUT,
     ADD_ERROR,
-    REMOVE_ERROR, REGISTRATION
+    REMOVE_ERROR
 } from './types';
 
 /**
@@ -101,8 +101,9 @@ export const registration = (user, success, failed) => async (dispatch) => {
         dispatch({ type: GET_LOGGED_USER, payload: response.data });
 
         success();
-    } catch ({ response: { status, statusText, data } }) {
-        dispatch({ type: ADD_ERROR, error: { status, statusText, data }});
+    } catch (err) {
+        console.log(err);
+        // dispatch({ type: ADD_ERROR, error: { status, statusText, data }});
 
         failed();
     }

@@ -12,6 +12,7 @@ import { getLoggedUser } from '../actions/account';
 import './app.css';
 
 import Registration from './account/Registration';
+import Logout from './account/Logout';
 
 class Application extends React.Component {
     constructor (props) {
@@ -103,7 +104,9 @@ class Application extends React.Component {
                         <Container className={'scrim-container'} fluid>
                             <Routes>
                                 <Route path={'/account/registration'} element={<Registration />} />
+                                <Route path={'/account/logout'} element={<Logout />} />
                             </Routes>
+
                             {/*<Route exact path='/' component={Home} />*/}
                             {/*<Route path={'/cookie/law/description'} component={CookieLaw} />*/}
 

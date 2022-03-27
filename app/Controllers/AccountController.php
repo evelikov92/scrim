@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use Engine\Common;
 use Engine\Http\BaseController;
 use Engine\Http\StatusCodes;
 use Engine\User\Auth\Authentication;
