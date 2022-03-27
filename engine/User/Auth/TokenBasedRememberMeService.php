@@ -28,10 +28,10 @@ class TokenBasedRememberMeService extends Auth
 
     /**
      * Get Logged user from Remember Me Token
-     * @param string $columns which columns of user is public to show
+     * @param string|array $columns which columns of user is public to show
      * @return array Logged user
      */
-    public final static function getUser(string $columns = '*')
+    public final static function getUser($columns = '*')
     {
         $userId = self::_verify();
         if (empty($userId)) {

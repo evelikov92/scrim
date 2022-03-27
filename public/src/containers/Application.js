@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { BrowserRouter, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Container, } from 'reactstrap';
@@ -10,6 +10,8 @@ import { setLanguage, getLanguage, getResources } from '../actions/language';
 import { getLoggedUser } from '../actions/account';
 
 import './app.css';
+
+import Registration from './account/Registration';
 
 class Application extends React.Component {
     constructor (props) {
@@ -36,15 +38,15 @@ class Application extends React.Component {
         this.props.getResources(this.getText);
         this.props.getLoggedUser(this.getUser);
 
-        // Set the cookie status
-        let cookieLaw = window.localStorage.getItem('cookie-law');
-        if (cookieLaw !== 'agree') {
-            window.setTimeout(() => {
-                if (window.location.pathname !== `/cookie/law/description`) {
-                    this.setState({ cookieBannerAgree: false });
-                }
-            }, 200);
-        }
+        // // Set the cookie status
+        // let cookieLaw = window.localStorage.getItem('cookie-law');
+        // if (cookieLaw !== 'agree') {
+        //     window.setTimeout(() => {
+        //         if (window.location.pathname !== `/cookie/law/description`) {
+        //             this.setState({ cookieBannerAgree: false });
+        //         }
+        //     }, 200);
+        // }
     }
 
     getUser () {
@@ -85,7 +87,7 @@ class Application extends React.Component {
 
     render () {
         return (
-            <BrowserRouter basename={`/`} onChange={() => alert('test')}>
+            <BrowserRouter basename={`/`}>
                 <div id={'scrim'}>
                     <div id={'scrim-app'}>
 
@@ -98,21 +100,21 @@ class Application extends React.Component {
 
                         <br />
 
-                        <Container className='scrim-container' fluid>
+                        <Container className={'scrim-container'} fluid>
                             <Routes>
-                                {/*<Route exact path='/' component={Home} />
-                                <Route path={'/cookie/law/description'} component={CookieLaw} />
-
-                                <Route path='/account/login' component={Login} />
-                                <Route path='/account/logout' component={Logout} />
-                                <Route path='/account/set-password/:token' component={SetPassword} />
-                                <Route path='/account/forgot-password' component={ForgotPassword} />
-                                <Route path='/account/confirmation' component={ConfirmationEmail} />
-                                <Route path='/account/activate/:token' component={ActivateAccount} />
-                                <PrivateRoute condition={this.isInRole('3')} path={'/account/profile'} component={Profile} />
-
-                                <Route component={NotFound} />*/}
+                                <Route path={'/account/registration'} element={<Registration />} />
                             </Routes>
+                            {/*<Route exact path='/' component={Home} />*/}
+                            {/*<Route path={'/cookie/law/description'} component={CookieLaw} />*/}
+
+                            {/*<Route path={'/account/login'} component={Login} />*/}
+                            {/*<Route path='/account/logout' component={Logout} />*/}
+                            {/*<Route path='/account/set-password/:token' component={SetPassword} />*/}
+                            {/*<Route path='/account/forgot-password' component={ForgotPassword} />*/}
+                            {/*<Route path='/account/confirmation' component={ConfirmationEmail} />*/}
+                            {/*<Route path='/account/activate/:token' component={ActivateAccount} />*/}
+
+                            {/*<Route component={NotFound} />*/}
                         </Container>
                     </Fragment>}
 

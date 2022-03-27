@@ -1,72 +1,16 @@
-2022-03-27 09:21:53; IP: UNKNOWN;
-URL: /;
-Exception: 2 file_get_contents(D:\Projects\scrim\engine/../public/build/index.html): failed to open stream: No such file or directory D:\Projects\scrim\engine\Http\Response.php 61 in D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php:34
+2022-03-27 01:23:48; IP: UNKNOWN;
+URL: /api/account/registration;
+Exception: 2 call_user_func_array() expects parameter 1 to be a valid callback, class '\App\Middleware\Role' not found D:\Projects\scrim\engine\Http\Middleware\Middleware.php 41 in D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php:34
 Stack trace:
-#0 D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php(53): Engine\ErrorHandler\Production\ErrorHandler::showException(500, '2 file_get_cont...')
-#1 [internal function]: Engine\ErrorHandler\Production\ErrorHandler->exception_handler(2, 'file_get_conten...', 'D:\\Projects\\scr...', 61, Array)
-#2 D:\Projects\scrim\engine\Http\Response.php(61): file_get_contents('D:\\Projects\\scr...')
-#3 D:\Projects\scrim\app\routes\route.php(15): Engine\Http\Response->page('D:\\Projects\\scr...')
-#4 [internal function]: Engine\Routes\Route->{closure}()
-#5 D:\Projects\scrim\engine\Routes\Route.php(299): call_user_func_array(Object(Closure), Array)
-#6 D:\Projects\scrim\engine\Routes\Route.php(406): Engine\Routes\Route->_executeAction(Object(Closure))
-#7 D:\Projects\scrim\engine\Routes\Route.php(176): Engine\Routes\Route->runRouteLogic(Object(Closure), Array)
-#8 D:\Projects\scrim\app\routes\route.php(17): Engine\Routes\Route->all(Array, Object(Closure))
-#9 D:\Projects\scrim\engine\Routes\Route.php(82): include_once('D:\\Projects\\scr...')
-#10 D:\Projects\scrim\engine\Application.php(78): Engine\Routes\Route->run()
-#11 D:\Projects\scrim\public\index.php(11): Engine\Application->run()
-#12 {main}
-
-2022-03-27 09:24:07; IP: UNKNOWN;
-URL: /;
-Exception: 2 file_get_contents(D:\Projects\scrim\engine/../public/build/index.html): failed to open stream: No such file or directory D:\Projects\scrim\engine\Http\Response.php 61 in D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php:34
-Stack trace:
-#0 D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php(53): Engine\ErrorHandler\Production\ErrorHandler::showException(500, '2 file_get_cont...')
-#1 [internal function]: Engine\ErrorHandler\Production\ErrorHandler->exception_handler(2, 'file_get_conten...', 'D:\\Projects\\scr...', 61, Array)
-#2 D:\Projects\scrim\engine\Http\Response.php(61): file_get_contents('D:\\Projects\\scr...')
-#3 D:\Projects\scrim\app\routes\route.php(15): Engine\Http\Response->page('D:\\Projects\\scr...')
-#4 [internal function]: Engine\Routes\Route->{closure}()
-#5 D:\Projects\scrim\engine\Routes\Route.php(299): call_user_func_array(Object(Closure), Array)
-#6 D:\Projects\scrim\engine\Routes\Route.php(406): Engine\Routes\Route->_executeAction(Object(Closure))
-#7 D:\Projects\scrim\engine\Routes\Route.php(176): Engine\Routes\Route->runRouteLogic(Object(Closure), Array)
-#8 D:\Projects\scrim\app\routes\route.php(17): Engine\Routes\Route->all(Array, Object(Closure))
-#9 D:\Projects\scrim\engine\Routes\Route.php(82): include_once('D:\\Projects\\scr...')
-#10 D:\Projects\scrim\engine\Application.php(78): Engine\Routes\Route->run()
-#11 D:\Projects\scrim\public\index.php(11): Engine\Application->run()
-#12 {main}
-
-2022-03-27 09:24:10; IP: UNKNOWN;
-URL: /;
-Exception: 2 file_get_contents(D:\Projects\scrim\engine/../public/build/index.html): failed to open stream: No such file or directory D:\Projects\scrim\engine\Http\Response.php 61 in D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php:34
-Stack trace:
-#0 D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php(53): Engine\ErrorHandler\Production\ErrorHandler::showException(500, '2 file_get_cont...')
-#1 [internal function]: Engine\ErrorHandler\Production\ErrorHandler->exception_handler(2, 'file_get_conten...', 'D:\\Projects\\scr...', 61, Array)
-#2 D:\Projects\scrim\engine\Http\Response.php(61): file_get_contents('D:\\Projects\\scr...')
-#3 D:\Projects\scrim\app\routes\route.php(15): Engine\Http\Response->page('D:\\Projects\\scr...')
-#4 [internal function]: Engine\Routes\Route->{closure}()
-#5 D:\Projects\scrim\engine\Routes\Route.php(299): call_user_func_array(Object(Closure), Array)
-#6 D:\Projects\scrim\engine\Routes\Route.php(406): Engine\Routes\Route->_executeAction(Object(Closure))
-#7 D:\Projects\scrim\engine\Routes\Route.php(176): Engine\Routes\Route->runRouteLogic(Object(Closure), Array)
-#8 D:\Projects\scrim\app\routes\route.php(17): Engine\Routes\Route->all(Array, Object(Closure))
-#9 D:\Projects\scrim\engine\Routes\Route.php(82): include_once('D:\\Projects\\scr...')
-#10 D:\Projects\scrim\engine\Application.php(78): Engine\Routes\Route->run()
-#11 D:\Projects\scrim\public\index.php(11): Engine\Application->run()
-#12 {main}
-
-2022-03-27 09:24:25; IP: UNKNOWN;
-URL: /;
-Exception: 2 file_get_contents(D:\Projects\scrim\engine/../public/build/index.html): failed to open stream: No such file or directory D:\Projects\scrim\engine\Http\Response.php 61 in D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php:34
-Stack trace:
-#0 D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php(53): Engine\ErrorHandler\Production\ErrorHandler::showException(500, '2 file_get_cont...')
-#1 [internal function]: Engine\ErrorHandler\Production\ErrorHandler->exception_handler(2, 'file_get_conten...', 'D:\\Projects\\scr...', 61, Array)
-#2 D:\Projects\scrim\engine\Http\Response.php(61): file_get_contents('D:\\Projects\\scr...')
-#3 D:\Projects\scrim\app\routes\route.php(15): Engine\Http\Response->page('D:\\Projects\\scr...')
-#4 [internal function]: Engine\Routes\Route->{closure}()
-#5 D:\Projects\scrim\engine\Routes\Route.php(299): call_user_func_array(Object(Closure), Array)
-#6 D:\Projects\scrim\engine\Routes\Route.php(406): Engine\Routes\Route->_executeAction(Object(Closure))
-#7 D:\Projects\scrim\engine\Routes\Route.php(176): Engine\Routes\Route->runRouteLogic(Object(Closure), Array)
-#8 D:\Projects\scrim\app\routes\route.php(17): Engine\Routes\Route->all(Array, Object(Closure))
-#9 D:\Projects\scrim\engine\Routes\Route.php(82): include_once('D:\\Projects\\scr...')
-#10 D:\Projects\scrim\engine\Application.php(78): Engine\Routes\Route->run()
-#11 D:\Projects\scrim\public\index.php(11): Engine\Application->run()
-#12 {main}
+#0 D:\Projects\scrim\engine\ErrorHandler\Production\ErrorHandler.php(53): Engine\ErrorHandler\Production\ErrorHandler::showException(500, '2 call_user_fun...')
+#1 [internal function]: Engine\ErrorHandler\Production\ErrorHandler->exception_handler(2, 'call_user_func_...', 'D:\\Projects\\scr...', 41, Array)
+#2 D:\Projects\scrim\engine\Http\Middleware\Middleware.php(41): call_user_func_array('\\App\\Middleware...', Array)
+#3 D:\Projects\scrim\engine\Routes\Route.php(410): Engine\Http\Middleware\Middleware::execute(Array, Object(Closure))
+#4 D:\Projects\scrim\engine\Routes\Route.php(395): Engine\Routes\Route->runRouteLogic('AccountControll...', Array)
+#5 D:\Projects\scrim\engine\Routes\Route.php(201): Engine\Routes\Route->_executeRoute('/api/account/re...', 'AccountControll...', Array)
+#6 D:\Projects\scrim\app\routes\route.php(30): Engine\Routes\Route->post('/account/regist...', 'AccountControll...', Array)
+#7 D:\Projects\scrim\engine\Routes\Route.php(82): include_once('D:\\Projects\\scr...')
+#8 D:\Projects\scrim\engine\Application.php(68): Engine\Routes\Route->run()
+#9 D:\Projects\scrim\public\index.php(11): Engine\Application->run()
+#10 {main}
 
