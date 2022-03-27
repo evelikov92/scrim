@@ -120,17 +120,9 @@ class Authentication extends Auth
             $email,
             'forgot_password',
             [
-                'subDomain' => Environment::get('APP_SUB_DOMAIN'),
                 'selector' => $selector,
                 'verifier' => $verifier,
 				'username' => $user['username'],
-                'forgot_password_first' => $text['forgot_password_first'],
-                'forgot_password_paragraph_one' => $text['forgot_password_paragraph_one'],
-                'forgot_password_paragraph_two' => $text['forgot_password_paragraph_two'],
-                'forgot_password_paragraph_three' => $text['forgot_password_paragraph_three'],
-                'forgot_password_paragraph_four' => $text['forgot_password_paragraph_four'],
-                'forgot_password_paragraph_five' => $text['forgot_password_paragraph_five'],
-                'choose_new_password_button' => $text['choose_new_password_button'],
                 'link' => Environment::get('APP_DOMAIN') . 'account/set-password'
             ],
             'Forgotten password'

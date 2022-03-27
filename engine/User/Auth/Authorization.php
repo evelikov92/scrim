@@ -88,19 +88,7 @@ class Authorization extends Auth
 
         // Send Email to the user
         $user['token'] = $token;
-        $text = Language::getLanguageResource();
-        $data = array_merge($user, [
-            'subDomain' => Environment::get('APP_SUB_DOMAIN'),
-            'activate_user_account_first' => $text['activate_user_account_first'],
-            'activate_user_account_second' => $text['activate_user_account_second'],
-            'activate_user_account_third' => $text['activate_user_account_third'],
-            'activate_user_account_fourth' => $text['activate_user_account_fourth'],
-            'activate_user_account_fifth' => $text['activate_user_account_fifth'],
-            'activate_user_account_sixth' => $text['activate_user_account_sixth'],
-            'activate_user_account_seventh' => $text['activate_user_account_seventh']
-        ]);
-
-        Email::getInstance()->sendEmail($user['email'], 'activate_user_account', $data, 'User account activated');
+        Email::getInstance()->sendEmail($user['email'], 'activate_user_account', $user, 'User account activated');
         return [];
     }
 }
