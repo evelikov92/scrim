@@ -16,7 +16,7 @@ class Cookie
      * @param string $path Which path of app will used that cookie
      * @param string $domain Domain name for the cookie
      */
-    public static function set(string $key, string $value, int $time, string $path = '/', string $domain = '')
+    public static function set($key, $value, $time, $path = '/', $domain = '')
     {
         setcookie($key, $value, $time, $path, $domain, isset($_SERVER['HTTPS']), true);
     }
@@ -25,7 +25,7 @@ class Cookie
      * Remove the cookie
      * @param string $key The name of key of the cookie attribute
      */
-    public static function remove(string $key)
+    public static function remove($key)
     {
         if (self::checkCookieExist($key)) {
             self::set($key, '', time() - 3600);
@@ -37,7 +37,7 @@ class Cookie
      * @param string $key The name of key of the cookie attribute
      * @return mixed The value on cookie attribute
      */
-    public static function get(string $key)
+    public static function get($key)
     {
         return filter_input(INPUT_COOKIE, filter_var($key));
     }
@@ -47,7 +47,7 @@ class Cookie
      * @param string $key The name of key of the cookie attribute
      * @return bool Do is exist cookie attribute with that $key
      */
-    public static function checkCookieExist(string $key)
+    public static function checkCookieExist($key)
     {
         return isset($_COOKIE[filter_var($key)]);
     }

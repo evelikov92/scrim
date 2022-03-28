@@ -17,7 +17,7 @@ class File
      * @param string $key Request input parameter attribute
      * @return string|null Full path to the file
      */
-    public static function save(string $folder, string $key)
+    public static function save($folder, $key)
     {
         $allowed = [ 'jpg', 'JPG', 'png', 'PNG', 'jpeg', 'JPEG', 'avi', 'AVI', 'mp4', 'MP4', 'pdf', 'PDF' ];
         $ext = pathinfo($_FILES[$key]['name'], PATHINFO_EXTENSION);
@@ -43,7 +43,7 @@ class File
      * @param string $ext Extension of uploaded file
      * @return string The new name of the uploaded file
      */
-    private static function _generateFileName(string $name, string $ext)
+    private static function _generateFileName($name, $ext)
     {
         $rnd = Text::genRandString(12);
         $name = $rnd . '_' . $name . '-' . time();

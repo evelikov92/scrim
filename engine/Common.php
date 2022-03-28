@@ -19,7 +19,7 @@ class Common
      * @param string $format The date time format
      * @return false|string Will return current date time on specific format
      */
-    public final static function convertToDate(string $format = 'Y-m-d h:i:s')
+    public final static function convertToDate($format = 'Y-m-d h:i:s')
     {
         return date($format, time());
     }
@@ -28,7 +28,7 @@ class Common
      * Show on readable way the array
      * @param array $arr Array which will show
      */
-    public final static function showArray(array $arr)
+    public final static function showArray($arr)
     {
         echo "<pre>" . print_r($arr, true) . "</pre>";
     }

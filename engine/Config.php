@@ -40,7 +40,7 @@ class Config
      * @param string|null $key Key of the variable on configuration file
      * @return mixed The value of the configuration variable
      */
-    public final function get(string $file, string $key = null)
+    public final function get($file, $key = null)
     {
         if (!isset($this->_configArray[$file])) {
             $this->_registerConfigFile($file);
@@ -76,7 +76,7 @@ class Config
      * Cache the config file path in array for can later use it their path
      * @param string $file The path to the config file
      */
-    private function _registerConfigFile(string $file)
+    private function _registerConfigFile($file)
     {
         // Check do name of file exist on configuration folder
         $f = realpath($this->_configFolder . $file . '.php');

@@ -21,7 +21,7 @@ class Input
      * @param string|null $validate List of rules which the client need to be correct
      * @return array|mixed The value of the User Inputs (possible only one, possible all, possible many elements)
      */
-    public static function getRequestParam(string $key = null, string $validate = null)
+    public static function getRequestParam($key = null, $validate = null)
     {
         $params = [];
 
@@ -97,7 +97,7 @@ class Input
      * @param string $validate List of rules which the client need to be correct
      * @return array|mixed The value of the User Inputs (possible only one, possible all, possible many elements)
      */
-    private static function getJsonParams(string $key, string $validate = null)
+    private static function getJsonParams($key, $validate = null)
     {
         $rawBody = file_get_contents('php://input'); // Read body
         $params = get_object_vars(json_decode($rawBody)); // Initialize default data array

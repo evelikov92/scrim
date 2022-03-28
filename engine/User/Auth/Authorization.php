@@ -22,7 +22,7 @@ class Authorization extends Auth
      * Activate the user account
      * @param string $token Verification token
      */
-    public static function activateUser(string $token)
+    public static function activateUser($token)
     {
         $db = MySqlQuery::getInstance();
         $user = $db->select('id')->table('users')->where('token', parent::_generateTokenHashString($token))
@@ -45,7 +45,7 @@ class Authorization extends Auth
      * @param bool $autoLogin Do is auto login on the system
      * @return array Registered user on the system
      */
-    public static function registration(array $user = [], bool $autoLogin = false)
+    public static function registration($user = [], $autoLogin = false)
     {
         if (empty($user) || empty($user['password'])) {
             new ErrorHandler(

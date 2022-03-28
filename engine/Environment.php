@@ -23,7 +23,7 @@ class Environment
      * @param string $key Name of the variable on the .env file
      * @return ErrorHandler|string The value of the variable on the .env file
      */
-    public final static function get(string $key)
+    public final static function get($key)
     {
         if (empty(self::$_variables)) {
             $file = Common::$_MAIN_FOLDER . '.env';

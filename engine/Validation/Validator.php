@@ -20,7 +20,7 @@ class Validator
      * @param string|null $conditions Condition for validated
      * @return mixed The value which client send to server or false
      */
-    public final static function validate(string $key, string $value, string $conditions = null)
+    public final static function validate($key, $value, $conditions = null)
     {
         if (!$conditions || !is_string($conditions)) {
             return $value;

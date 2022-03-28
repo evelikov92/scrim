@@ -20,7 +20,7 @@ class Text
      * @param string $name The name of the variable
      * @return string|bool The validated variable or the boolean => false is not correct
      */
-    public final static function required(string $text, string $name)
+    public final static function required($text, $name)
     {
         if (!empty($text)) {
             return $text;
@@ -45,7 +45,7 @@ class Text
      * @param string $name The name of the variable
      * @return string|bool The validated variable or the boolean => false is not correct
      */
-    public final static function min(string $text, int $len, string $name)
+    public final static function min($text, $len, $name)
     {
         if (strlen($text) >= (int)$len) {
             return $text;
@@ -65,7 +65,7 @@ class Text
      * @param string $name The name of the variable
      * @return string|bool The validated variable or the boolean => false is not correct
      */
-    public final static function max(string $text, int $len, string $name)
+    public final static function max($text, $len, $name)
     {
         if (strlen($text) <= (int)$len) {
             return $text;
@@ -85,7 +85,7 @@ class Text
      * @param string $name The name of the variable
      * @return string|bool The validated variable or the boolean => false is not correct
      */
-    public final static function length(string $text, int $length, string $name)
+    public final static function length($text, $length, $name)
     {
         if (strlen($text) == $length) {
             return $text;
@@ -105,7 +105,7 @@ class Text
      * @param string $name The name of the variable
      * @return string|bool The validated variable or the boolean => false is not correct
      */
-    public final static function startWith(string $text, string $start, string $name)
+    public final static function startWith($text, $start, $name)
     {
         if (substr($text, 0, strlen($start)) === $start) {
             return $text;
@@ -125,7 +125,7 @@ class Text
      * @param string $name The name of the variable
      * @return string|bool The validated variable or the boolean => false is not correct
      */
-    public final static function endWith(string $text, string $end, string $name)
+    public final static function endWith($text, $end, $name)
     {
         $len = strlen($end);
         if (substr($text, strlen($text) - $len, $len) === $end) {
@@ -144,7 +144,7 @@ class Text
      * @param string $text The value of the variable
      * @return string|bool The validated variable or the boolean => false is not correct
      */
-    public final static function xss(string $text)
+    public final static function xss($text)
     {
         return htmlspecialchars(XSS::cleanInput($text));
     }
@@ -155,7 +155,7 @@ class Text
      * @param string $name The name of the variable
      * @return string|bool The validated variable or the boolean => false is not correct
      */
-    public final static function email(string $text, string $name)
+    public final static function email($text, $name)
     {
         if (empty($text) || filter_var($text, FILTER_VALIDATE_EMAIL) !== false) {
             return $text;

@@ -19,7 +19,7 @@ class Number
      * @param string $name The name of the variable
      * @return bool|int The validated variable or the boolean => false is not correct
      */
-    public final static function int($number, string $name)
+    public final static function int($number, $name)
     {
         // Check do number is integer
         if (is_numeric($number) && strpos($number, '.') === FALSE) {
@@ -39,7 +39,7 @@ class Number
      * @param string $name The name of the variable
      * @return bool|float The validated variable or the boolean => false is not correct
      */
-    public final static function float($number, string $name)
+    public final static function float($number, $name)
     {
         if (is_numeric($number)) {
             return $number;
@@ -59,7 +59,7 @@ class Number
      * @param string $name The name of the variable
      * @return bool|mixed The validated variable or the boolean => false is not correct
      */
-    public final static function less($number, $max, string $name)
+    public final static function less($number, $max, $name)
     {
         // Check do developer set here correct value
         if (!is_numeric($max)) {
@@ -95,7 +95,7 @@ class Number
      * @param string $name The name of the variable
      * @return bool|mixed The validated variable or the boolean => false is not correct
      */
-    public final static function greater($number, $min, string $name)
+    public final static function greater($number, $min, $name)
     {
         // Check do developer set here correct value
         if (!is_numeric($min)) {
@@ -131,7 +131,7 @@ class Number
      * @param string $name The name of the variable
      * @return bool|mixed The validated variable or the boolean => false is not correct
      */
-    public final static function length($digits, $len, string $name)
+    public final static function length($digits, $len, $name)
     {
         // Check do developer set here correct value
         if (!is_numeric($len)) {
@@ -165,7 +165,7 @@ class Number
      * @param string $name The name of the variable
      * @return bool|mixed The validated variable or the boolean => false is not correct
      */
-    public final static function max($digits, $len, string $name)
+    public final static function max($digits, $len, $name)
     {
         // Check do developer set here correct value
         if (!is_numeric($len)) {
@@ -193,7 +193,7 @@ class Number
      * @param string $name The name of the variable
      * @return bool|mixed The validated variable or the boolean => false is not correct
      */
-    public final static function min($digits, $len, string $name)
+    public final static function min($digits, $len, $name)
     {
         if (!is_numeric($len)) {
             new ErrorHandler(

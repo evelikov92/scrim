@@ -29,7 +29,7 @@ class Session
      * @param string $path path of session
      * @param string $domain domain name of session
      */
-    public function start(string $name = '', int $lifetime = 0, string $path = '/', string $domain = '')
+    public function start($name = '', $lifetime = 0, $path = '/', $domain = '')
     {
         if (empty($name)) {
             $name = $this->_defaultSessionName;
@@ -45,7 +45,7 @@ class Session
      * @param string $key key of element on session
      * @return null|string value of variable save it on session
      */
-    public function get(string $key)
+    public function get($key)
     {
         if (isset($_SESSION[$key])) {
             return $_SESSION[filter_var($key)];
@@ -58,7 +58,7 @@ class Session
      * @param string $key key of element save it on session
      * @param mixed $value value of element save it on session
      */
-    public function set(string $key, $value)
+    public function set($key, $value)
     {
         $_SESSION[$key] = $value;
     }
