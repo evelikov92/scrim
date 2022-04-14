@@ -4,7 +4,6 @@ namespace Engine\User\Data;
 
 /**
  * That Class manage all cookies on the system
- * @package OldEngine\User\Data
  */
 class Cookie
 {
@@ -13,10 +12,10 @@ class Cookie
      * @param string $key The name of key of the cookie attribute
      * @param string $value The value on cookie attribute
      * @param int $time How many times will save the cookie
-     * @param string $path Which path of app will used that cookie
+     * @param string $path Which path of app will use that cookie
      * @param string $domain Domain name for the cookie
      */
-    public static function set(string $key, string $value, int $time, string $path = '/', string $domain = '')
+    public static function set(string $key, string $value, int $time, string $path = '/', string $domain = '') : void
     {
         setcookie($key, $value, $time, $path, $domain, isset($_SERVER['HTTPS']), true);
     }
@@ -25,7 +24,7 @@ class Cookie
      * Remove the cookie
      * @param string $key The name of key of the cookie attribute
      */
-    public static function remove(string $key)
+    public static function remove(string $key) : void
     {
         if (self::checkCookieExist($key)) {
             self::set($key, '', time() - 3600);

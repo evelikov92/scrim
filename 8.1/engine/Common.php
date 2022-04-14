@@ -36,7 +36,7 @@ class Common
      */
     public final static function genRandString(int $len) : string
     {
-        return bin2hex(random_bytes((int)$len));
+        return bin2hex(random_bytes($len));
     }
 
     /**

@@ -2,6 +2,8 @@
 
 namespace Engine;
 
+use Engine\User\Data\Session;
+
 /**
  * Main class which run the application
  */
@@ -48,6 +50,18 @@ class Application
         }
 
         $config = Config::getInstance();
+
+        // Configuration of the session
+        $sessionSettings = $config->get('app', 'session');
+        Session::getInstance()->start(
+            $sessionSettings['name'],
+            $sessionSettings['lifetime'],
+            $sessionSettings['path'],
+            $sessionSettings['domain']
+        );
+
+        // Configuration of the database
+        $dbSettings = $config->getConfigArray('db');
     }
 
     /**

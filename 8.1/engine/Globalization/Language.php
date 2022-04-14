@@ -1,6 +1,6 @@
 <?php
 
-namespace OldEngine\Globalization;
+namespace Engine\Globalization;
 
 use Engine\Common;
 use Engine\Config;

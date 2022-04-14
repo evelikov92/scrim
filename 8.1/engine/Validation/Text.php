@@ -2,7 +2,6 @@
 
 namespace Engine\Validation;
 
-use Engine\ErrorHandler\ErrorHandler;
 use Engine\ErrorHandler\Production\UserException;
 use Engine\Globalization\Language;
 use Engine\Http\StatusCodes;
@@ -106,7 +105,7 @@ class Text
         }
 
         return UserException::addExceptions(
-            StatusCodes::$_BAD_REQUEST,
+            StatusCodes::BAD_REQUEST,
             Language::textLanguageConverter("the_value_of+<$name>+not_start+<$start>"),
             $name
         );
