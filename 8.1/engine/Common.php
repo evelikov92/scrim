@@ -32,7 +32,6 @@ class Common
      * Generate random string
      * @param int $len Length of string
      * @return string Random string
-     * @throws Exception
      */
     public final static function genRandString(int $len) : string
     {

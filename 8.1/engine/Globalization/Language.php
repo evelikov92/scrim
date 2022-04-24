@@ -78,7 +78,6 @@ class Language
                 $lang = self::_getDefaultLanguage();
                 self::setLanguage($lang);
                 return $lang;
-                // return self::_getDefaultLanguage();
             }
 
             for ($i = 0, $len = count($accept_languages); $i < $len; ++$i) {

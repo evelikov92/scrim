@@ -4,7 +4,6 @@ namespace Engine;
 
 use Engine\ErrorHandler\ErrorHandler;
 use Engine\Http\StatusCodes;
-use phpDocumentor\Reflection\Types\Nullable;
 
 /**
  * Singleton class which is manage the configuration files of the application
@@ -65,9 +64,9 @@ class Config
      * Get the configuration value from the config file
      * @param string $file Name of the config file
      * @param string $key Key of the array inside config file
-     * @return string Value for variable
+     * @return mixed Value for variable
      */
-    public final function get(string $file, string $key) : string
+    public final function get(string $file, string $key) : mixed
     {
         if (!isset($this->_configArray[$file])) {
             $this->_registerConfigFile($file);

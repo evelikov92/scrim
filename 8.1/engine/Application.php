@@ -2,7 +2,11 @@
 
 namespace Engine;
 
+use Engine\Database\Adapter;
+use Engine\Database\MySqlQuery;
+use Engine\Routes\Route;
 use Engine\User\Data\Session;
+use PDO;
 
 /**
  * Main class which run the application
@@ -26,7 +30,6 @@ class Application
 
     /**
      * Initialize settings for web application
-     * @return void
      */
     public final function init() : void
     {
@@ -62,14 +65,22 @@ class Application
 
         // Configuration of the database
         $dbSettings = $config->getConfigArray('db');
+        MySqlQuery::getInstance()->setAdapter(
+            new Adapter(new PDO(
+                    $dbSettings['connection_uri'],
+                    $dbSettings['username'],
+                    $dbSettings['password'],
+                    $dbSettings['pdo_options']
+                )
+            )
+        );
     }
 
     /**
      * Run the Web application
-     * @return void
      */
     public final function run() : void
     {
-        echo 'Application Running';
+        Route::getInstance()->run();
     }
 }

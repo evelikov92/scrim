@@ -1,0 +1,47 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteOldEngine On
+
+    # Redirect Trailing Slashes...
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Redirect to HTTPS Protocol
+#	RewriteCond %{HTTPS} off
+#    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+	RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+<Files php72-fcgi.ini>
+	Order allow,deny
+	Deny from all
+</Files>
+
+<Files error.log>
+	Order allow,deny
+	Deny from all
+</Files>
+
+<Files php.fcgi>
+	Order allow,deny
+	Deny from all
+</Files>
+
+<ifModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/x-icon "access plus 2592000 days"
+  ExpiresByType image/jpeg "access plus 2592000 days"
+  ExpiresByType image/png "access plus 2592000 days"
+  ExpiresByType image/gif "access plus 2592000 days"
+  ExpiresByType application/x-shockwave-flash "access plus 2592000 days"
+  ExpiresByType text/css "access plus 604800 days"
+  ExpiresByType text/javascript "access plus 216000 days"
+  ExpiresByType application/javascript "access plus 216000 days"
+  ExpiresByType application/x-javascript "access plus 216000 days"
+  ExpiresByType text/html "access plus 600 days"
+</ifModule>

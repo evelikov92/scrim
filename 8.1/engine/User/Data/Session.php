@@ -42,9 +42,9 @@ class Session
     /**
      * Get variable value from session array
      * @param string $key key of element on session
-     * @return string value of variable save it on session
+     * @return mixed value of variable save it on session
      */
-    public function get(string $key) : string
+    public function get(string $key) : mixed
     {
         if (isset($_SESSION[$key])) {
             return $_SESSION[filter_var($key)];
