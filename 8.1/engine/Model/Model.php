@@ -2,7 +2,8 @@
 
 namespace Engine\Model;
 
-use Engine\Database\MySqlQuery;
+use Engine\Database\Database;
+use Engine\Database\IQuery;
 
 abstract class Model
 {
@@ -10,12 +11,12 @@ abstract class Model
 
     protected array $_columns = [];
 
-    protected MySqlQuery $_db;
+    protected IQuery $_db;
 
     public function __construct(string $table)
     {
         $this->_table = $table;
-        $this->_db = MySqlQuery::getInstance();
+        $this->_db = Database::getInstance()->db();
     }
 
     /**

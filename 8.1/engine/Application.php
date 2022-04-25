@@ -3,7 +3,7 @@
 namespace Engine;
 
 use Engine\Database\Adapter;
-use Engine\Database\MySqlQuery;
+use Engine\Database\Database;
 use Engine\Routes\Route;
 use Engine\User\Data\Session;
 use PDO;
@@ -65,15 +65,14 @@ class Application
 
         // Configuration of the database
         $dbSettings = $config->getConfigArray('db');
-        MySqlQuery::getInstance()->setAdapter(
-            new Adapter(new PDO(
-                    $dbSettings['connection_uri'],
-                    $dbSettings['username'],
-                    $dbSettings['password'],
-                    $dbSettings['pdo_options']
-                )
-            )
-        );
+        $db = Database::getInstance();
+        $db->setEngine($dbSettings['engine']);
+        $db->setAdapter(new Adapter(new PDO(
+            $dbSettings['connection_uri'],
+            $dbSettings['username'],
+            $dbSettings['password'],
+            $dbSettings['pdo_options']
+        )));
     }
 
     /**

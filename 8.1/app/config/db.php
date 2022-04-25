@@ -5,6 +5,7 @@ use Engine\Environment;
 $name = Environment::get('DATABASE_NAME');
 
 return [
+    'engine' => 'mysql',
     'connection_uri' => "mysql:host=localhost;dbname=$name",
     'username' => Environment::get('DATABASE_USER'),
     'password' => Environment::get('DATABASE_PASSWORD'),

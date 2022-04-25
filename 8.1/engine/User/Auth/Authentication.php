@@ -2,7 +2,7 @@
 
 namespace Engine\User\Auth;
 
-use Engine\Database\MySqlQuery;
+use Engine\Database\Database;
 use Engine\Email\Email;
 use Engine\Environment;
 use Engine\Globalization\Language;
@@ -55,7 +55,7 @@ class Authentication extends Auth
      */
     public final static function logIn(string $username, string $password, string $columns = '*') : array
     {
-        $user = MySqlQuery::getInstance()->table('users')->select($columns)
+        $user = Database::getInstance()->db()->table('users')->select($columns)
             ->where('username', $username)->whereNull('is_deleted')
             ->prepare()->get()->fetchRowAssoc();
 
@@ -94,7 +94,7 @@ class Authentication extends Auth
      */
     public final static function forgotPassword(string $email) : void
     {
-        $db = MySqlQuery::getInstance();
+        $db = Database::getInstance()->db();
 
         // Find user with that email
         $user = $db->select('id, username')->table('users')
@@ -137,7 +137,7 @@ class Authentication extends Auth
      */
     public final static function changePassword(string $selector, string $verifier,  string $password) : void
     {
-        $db = MySqlQuery::getInstance();
+        $db = Database::getInstance()->db();
 
         $info = $db->table('password_tokens')->select('*')
             ->where('selector', parent::_generateTokenHashString($selector))

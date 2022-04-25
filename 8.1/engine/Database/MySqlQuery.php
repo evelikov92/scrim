@@ -11,12 +11,6 @@ use Engine\Http\StatusCodes;
 class MySqlQuery implements IQuery
 {
     /**
-     * Creator of sql queries and connect to database
-     * @var MySqlQuery|null
-     */
-    private static ?MySqlQuery $_instance = null;
-
-    /**
      * where clause for sql query
      * @var string
      */
@@ -591,18 +585,6 @@ class MySqlQuery implements IQuery
     {
         $this->_command = $command;
         return $this;
-    }
-
-    /**
-     * Get or create new QBuilder object
-     * @return MySqlQuery Creator of sql queries and connect to database
-     */
-    public static function getInstance() : MySqlQuery
-    {
-        if (self::$_instance === null) {
-            self::$_instance = new MySqlQuery();
-        }
-        return self::$_instance;
     }
 
     /**
