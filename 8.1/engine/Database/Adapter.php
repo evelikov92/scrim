@@ -95,16 +95,16 @@ class Adapter
      * Get list of records from database
      * @return array List of all records found for that Mysql Query
      */
-    public function fetchAllAssoc()
+    public function fetchAllAssoc() : array
     {
         return $this->_stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
     /**
      * Get only first found record from database
-     * @return array Associative array with one record. The keys is the name of columns
+     * @return array Associative array with one record. The keys are the name of columns
      */
-    public function fetchRowAssoc()
+    public function fetchRowAssoc() : array
     {
         return $this->_stmt->fetch(\PDO::FETCH_ASSOC);
     }
@@ -113,7 +113,7 @@ class Adapter
      * Get the id of last inserted record
      * @return int Last inserted id
      */
-    public function getLastInsertId()
+    public function getLastInsertId() : int
     {
         return $this->_db->lastInsertId();
     }
@@ -122,7 +122,7 @@ class Adapter
      * Get count of affected rows on table
      * @return int count of affected rows
      */
-    public function getAffectedRows()
+    public function getAffectedRows() : int
     {
         return $this->_stmt->rowCount();
     }
