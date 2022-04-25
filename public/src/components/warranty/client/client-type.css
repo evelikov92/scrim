@@ -1,0 +1,14 @@
+.client-type {
+    cursor: pointer;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.client-type img {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index: 1!important;
+    position: relative;
+    border: 3px solid #bbb;
+    margin-top: -10px;
+    width: 100%;
+}

@@ -1,0 +1,22 @@
+.react-simple-paginator .page-item.active .page-link,
+.react-simple-paginator .page-item.active .page-link:focus,
+.react-simple-paginator .page-item.active .page-link:active,
+.react-simple-paginator .page-item.active .page-link:hover {
+  background-color: #337ab7;
+  border-color: #337ab7;
+  color: #fff;
+}
+.react-simple-paginator .page-item.active .page-link {
+  font-weight: bold;
+  font-style: italic;
+}
+.react-simple-paginator .go-to-page-btn {
+  background-color: #337ab7;
+  border-color: #337ab7
+}
+.react-simple-paginator .go-to-page-input {
+  border-radius: 0;
+  border: 1px solid #dee2e6;
+  border-left: none;
+  border-right: none;
+}

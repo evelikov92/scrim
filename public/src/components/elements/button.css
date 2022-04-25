@@ -1,0 +1,44 @@
+.gse-btn {
+    width: 100%;
+    z-index: 20!important;
+    position: relative;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.gse-btn.reverse {
+    border: 2px solid #80973f;
+    pointer-events: none;
+}
+    .gse-btn .btn {
+        width: 99%;
+        margin: .5%;
+        font-size: 1.2rem;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+.gse-btn, .gse-btn .btn {
+    -moz-transition: background-color .2s ease-in;
+    -o-transition: background-color .2s ease-in;
+    -webkit-transition: background-color .2s ease-in;
+    transition: background-color .2s ease-in;
+    border-radius: 10px!important;
+    color: #fff;
+}
+.gse-btn.normal .btn {
+    border-color: #fff!important;
+}
+.gse-btn.reverse .btn {
+    border-color: #80973f!important;
+    color: #80973f!important;
+}
+.gse-btn.normal, .gse-btn.normal .btn {
+    background-color: #80973f!important;
+}
+    .gse-btn.normal:hover, .gse-btn.normal .btn:hover {
+        background-color: #3f9780!important;
+    }
+.gse-btn.reverse, .gse-btn.reverse .btn {
+    background-color: #fff!important;
+}
+    .gse-btn.reverse:hover, .gse-btn.reverse .btn:hover {
+        background-color: #eee!important;
+    }

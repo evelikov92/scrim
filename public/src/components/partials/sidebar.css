@@ -1,0 +1,31 @@
+.sidebar-nav {
+    margin: 0;
+    list-style-type: none;
+    border: 2px solid #110630;
+    border-top: none;
+    padding-left: 0;
+}
+.sidebar-nav li {
+    border-top: 1px solid #110630;
+}
+.sidebar-nav li a {
+    display: block;
+    line-height: 2.4rem;
+    padding-left: 8%;
+    color: #212121;
+    border: none;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Neuzit Heavy", sans-serif;
+    transition: all ease-in 0.2s
+}
+.sidebar-nav li:not(.active-sidebar-item) a:hover, .sidebar-nav a:active, .sidebar-nav a:focus {
+    text-decoration: none;
+    background-color: #80973f;
+    color: #fff;
+}
+.sidebar-nav .active-sidebar-item a {
+    text-decoration: none;
+    background-color: #80973f;
+    color: #fff;
+}

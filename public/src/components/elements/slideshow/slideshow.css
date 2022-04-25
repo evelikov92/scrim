@@ -1,0 +1,48 @@
+.react-slide-show {
+    background-color: #fff;
+    position: relative;
+}
+.slide-show-content .slide, .slide-show-ball .ball {
+    display: none;
+}
+.slide-show-content .active-slide, .slide-show-ball .active-ball {
+    display: block;
+    position: relative;
+}
+.slide-show-content .slide-show-title {
+    background-color: rgba(255, 255, 255, 0.67);
+    position: absolute;
+    height: 10%;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.slide-show-content {
+    list-style-type: none;
+    padding: 0;
+}
+.react-slide-show .slide-arrow {
+    position: absolute;
+    top: 40%;
+    z-index: 1000;
+    opacity: .8;
+    cursor: pointer;
+}
+.left-slide-arrow {
+    left: 5%;
+}
+.right-slide-arrow {
+    right: 5%;
+}
+.slide-show-content .slide-show-message {
+    background-color: rgba(255, 255, 255, 0.67);
+    position: absolute;
+    top: 90%;
+    height: 10%;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+

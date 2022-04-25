@@ -1,0 +1,43 @@
+{
+  "name": "scrim",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "/build",
+  "dependencies": {
+    "axios": "0.18.0",
+    "bootstrap": "4.0.0",
+    "chart.js": "1.1.1",
+    "font-awesome": "4.7.0",
+    "lodash": "4.17.5",
+    "moment": "2.18.1",
+    "prop-types": "15.6.1",
+    "react": "16.3.1",
+    "react-chartjs": "1.2.0",
+    "react-datepicker": "1.5.0",
+    "react-dom": "16.3.1",
+    "react-google-maps": "9.4.5",
+    "react-google-recaptcha": "0.11.0",
+    "react-redux": "5.0.7",
+    "react-router": "4.2.0",
+    "react-router-dom": "4.2.2",
+    "react-scripts": "1.1.4",
+    "react-telephone-input": "4.5.8",
+    "reactstrap": "5.0.0",
+    "redux": "3.7.2",
+    "redux-form": "7.3.0",
+    "redux-promise": "0.5.3",
+    "redux-thunk": "2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom --coverage",
+    "test:watch": "npm run test -- --watch",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "redux-logger": "3.0.6",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1"
+  }
+}

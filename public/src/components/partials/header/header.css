@@ -1,0 +1,67 @@
+.header {
+}
+
+.master-header > div {
+    padding: 0
+}
+
+.master-header div img {
+    /*max-width: 98%;*/
+    /*width: 98%;*/
+    margin: .8% auto!important;
+    /*padding: 0;*/
+}
+
+.sub-header, .master-header {
+    margin: 0!important;
+}
+
+.sub-header > div {
+    min-height: 251px;
+    padding: 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#80973f+1,9dac61+64,80973f+100 */
+    background: url("title-1.png") #80973f; /* Old browsers */
+    background: url("title-1.png"), -moz-linear-gradient(left, #80973f 0%, #9dac61 19%, #80973f 55%, #9dac61 81%, #80973f 100%); /* FF3.6-15 */
+    background: url("title-1.png"), -webkit-linear-gradient(left, #80973f 0%, #9dac61 19%, #80973f 55%, #9dac61 81%, #80973f 100%); /* Chrome10-25,Safari5.1-6 */
+    background: url("title-1.png"), linear-gradient(to right, #80973f 0%, #9dac61 19%, #80973f 55%, #9dac61 81%, #80973f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80973f', endColorstr='#80973f',GradientType=1 ); /* IE6-9 */
+    background-repeat: repeat-y;
+    background-position: center center;
+}
+.header-title {
+    position: absolute;
+    left: 4px;
+    bottom: 4px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #839444;
+}
+.sub-header > div {
+    position: relative;
+}
+
+
+
+@media (max-width: 768px) {
+    .sub-header > div {
+        min-height: 280px;
+    }
+    .header-title {
+        font-size: .8rem;
+    }
+    .navbar-nav .nav-item {
+        display: block;
+
+        /*float: left;*/
+        /*width: 50%;*/
+    }
+    .navbar-nav .nav-item .nav-link {
+        border-radius: 0;
+        padding: 2px;
+        font-size: .7rem;
+        font-weight: normal;
+    }
+}

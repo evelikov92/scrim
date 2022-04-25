@@ -1,0 +1,24 @@
+.warranty-page {
+    border: 2px solid #bbb;
+}
+
+.warranty-body, .warranty-term-header {
+    margin: .3% .5%;
+}
+.warranty-body {
+    font-family: Arial, Verdana, Georgia, sans-serif;
+    font-size: 1.2rem;
+    cursor: default;
+    text-align: justify;
+    margin: .1%;
+    color: #000;
+}
+.warranty-header {
+    font-family: Tahoma sans-serif;
+}
+.warranty-body-red {
+    color: #e80415;
+}
+.check-serial-number-form .gse-btn {
+    margin: 0
+}

@@ -1,0 +1,48 @@
+.ux-checkbox {
+    cursor: pointer;
+}
+
+.material-checkbox {
+    display: none;
+}
+.material-checkbox:disabled {
+    color: #aaa;
+}
+
+.material-checkbox + .material-checkbox-title::before {
+    content: "\f096";
+    font-family: "FontAwesome";
+    speak: none;
+    display: inline-block;
+    width: 1em;
+    margin-right: 5px;
+    animation-duration: .2s;
+    animation-name: tickInactive;
+}
+.material-checkbox:checked + .material-checkbox-title::before {
+    content: "\f14a";
+    color: #06a3e9;
+    animation-duration: .2s;
+    animation-name: tickActive;
+}
+.material-checkbox:disabled + .material-checkbox-title::before {
+    content: "\f0c8";
+    color: #ccc;
+}
+
+@keyframes tickActive {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+@keyframes tickInactive {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}

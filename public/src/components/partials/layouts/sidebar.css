@@ -1,0 +1,11 @@
+.sidebar {
+    border-right: 2px solid red;
+}
+.sidebar-context {
+    padding-top: .8%;
+    margin-top: .8%;
+}
+
+.sidebar-nav li {
+    padding: 0;
+}

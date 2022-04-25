@@ -1,0 +1,46 @@
+.language-elements {
+    position: absolute;
+    right: .2%;
+    top: 200px;
+    z-index: 4000000;
+}
+.list-of-languages {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    background-color: rgba(242, 243, 235, .6);
+    border-radius: 15px;
+    list-style-type: none;
+}
+    .list-of-languages li {
+        display: none!important;
+        cursor: pointer;
+        background: transparent;
+    }
+    .list-of-languages .active-language-item {
+        display: block!important;
+    }
+    .list-of-languages-open li {
+        display: block!important;
+    }
+    .list-of-languages li img {
+        background: transparent!important;
+        border: none!important;
+        margin: 10%;
+        width: 80%;
+    }
+
+
+.lang-item-enter {
+    display: none;
+}
+.lang-item-enter-active {
+    display: block;
+    transition: 0.5s ease-in all;
+}
+
+@media (max-width: 768px) {
+    .language-elements {
+        top: 230px;
+    }
+}
